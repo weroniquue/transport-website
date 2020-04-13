@@ -1,0 +1,377 @@
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  padding-bottom: 20px;
+  margin: 0 auto;
+  color: #012d5c;
+}
+
+.square {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+}
+
+.big-square {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+}
+
+.big-square-left {
+  right: 50%;
+  left: auto;
+}
+
+#square1 {
+  background-color: #012d5c;
+  right: 50%;
+}
+
+#square2 {
+  left: 50%;
+  background-color: #c20034;
+}
+
+.language {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  grid-area: language;
+  margin-top: 15px;
+  margin-right: 10px;
+}
+
+.language > a {
+  border-right: 1px black solid;
+  text-decoration: none;
+  color: inherit;
+  padding: 0 10px;
+}
+
+.language a:last-of-type,
+.navigation a:last-of-type {
+  border: none;
+}
+
+.navigation {
+  display: flex;
+  align-items: flex-end;
+  grid-area: navigation;
+}
+
+.navigation > a {
+  border-right: 1px #c20034 solid;
+  padding: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-header {
+  background: url("resources/logotype.svg") no-repeat center;
+  width: 240px;
+  height: 80px;
+  grid-area: logo-header;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav i {
+  font-size: 3em;
+  color: #012d5c;
+  display: none;
+}
+
+main > *,
+footer > * {
+  color: white;
+}
+
+.main-section {
+  display: grid;
+  grid-template-columns: 1fr 60% 1fr;
+  grid-template-areas: "left-container center-container right-container";
+  min-height: 400px;
+}
+
+.left-container {
+  grid-area: left-container;
+}
+
+.center-container {
+  display: flex;
+  align-items: flex-end;
+  grid-area: center-container;
+}
+
+.right-container {
+  grid-area: right-container;
+}
+
+.info-box {
+  width: 50%;
+  height: 100%;
+  padding: 3em;
+}
+
+.info-box-right {
+  justify-content: flex-end;
+}
+
+#video-box {
+  background: url("resources/cys1.jpg") no-repeat;
+  background-size: cover;
+}
+
+#play-video {
+  font-size: 5em;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.div-with-center-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-box-company {
+  background-color: rgba(61, 61, 79, 0.7);
+}
+
+.info-box-details {
+  background-color: #002d5c;
+}
+
+.company-left {
+  background: url("resources/01.jpg") no-repeat;
+  background-size: cover;
+}
+
+.company {
+  background: url("resources/company.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.company-right {
+  background: url("resources/logistics-1.jpg") no-repeat right;
+  background-size: cover;
+}
+
+.company-grey {
+  background-color: #bdbfbe;
+}
+
+.projects-box {
+  background: url("resources/grph.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.news-red {
+  background-color: #c20034;
+}
+
+.slides {
+  position: relative;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.services {
+  background: url(resources/range.jpg) no-repeat center;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.services-2 {
+  background: url(resources/company.jpg) no-repeat center;
+}
+
+.services-3 {
+  background: url(resources/grph.jpg) no-repeat center;
+}
+
+.services > * {
+  width: 60%;
+  padding: 0 1em;
+}
+
+.mid-grey-box {
+  background-color: #737373;
+}
+
+.grey-box {
+  background-color: #555555;
+}
+
+footer {
+  background-color: #012d5c;
+  display: flex;
+  height: 150px;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo {
+  background: url("resources/logotype_white.svg") no-repeat center;
+  width: 200px;
+  height: 80px;
+}
+
+.footer-details {
+  margin-top: 18px;
+  margin-left: 30px;
+}
+
+.footer-details > * {
+  margin: 0;
+}
+
+@media only screen and (max-width: 480px) {
+  .nav {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  #mobile-menu {
+    display: inline;
+    padding-top: 10px;
+  }
+
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    transition: all 2s ease;
+  }
+
+  .navigation-active {
+    display: flex;
+  }
+
+  .navigation > a {
+    border: none;
+  }
+
+  .main-section {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "center-container";
+    height: auto;
+  }
+
+  .info-box {
+    width: 100%;
+    height: 400px;
+    padding: 2em;
+  }
+
+  .center-container {
+    flex-direction: column;
+  }
+
+  .big-square,
+  .square {
+    display: none;
+  }
+
+  .services > * {
+    width: 100%;
+    padding: 0 2.5em;
+  }
+
+  .modal-content {
+    transform: rotate(90deg);
+  }
+}
+
+@media only screen and (max-height: 480px) and (orientation: landscape) {
+  .main-section {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "center-container";
+    min-height: 500px;
+  }
+}
