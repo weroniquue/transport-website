@@ -5,7 +5,7 @@ document.getElementById("play-video").addEventListener("click", () => {
   modal.classList.add("div-with-center-items");
 });
 
-window.addEventListener("click", event => {
+window.addEventListener("click", (event) => {
   if (event.target == modal) {
     document
       .getElementsByClassName("youtube-video")[0]
@@ -52,3 +52,13 @@ function showSlides(n) {
 
   slides[slideIndex - 1].style.display = "flex";
 }
+
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+});
